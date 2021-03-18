@@ -1,8 +1,11 @@
+import uuid
 from typing import Optional
 
 import flask
+import msal
 from flask import Request
 
+from pypi_org.configs import app_config
 from pypi_org.infrastructure import request_dict, cookie_auth
 
 
@@ -16,3 +19,6 @@ class ViewModelBase:
 
     def to_dict(self):
         return self.__dict__
+
+
+
